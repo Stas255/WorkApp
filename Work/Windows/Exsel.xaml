@@ -1,0 +1,30 @@
+﻿<Window x:Class="Work.Windows.Exsel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Work.Windows"
+        mc:Ignorable="d"
+        Title="Exsel" Height="450" Width="830">
+    <Grid>
+        <DataGrid Name="Grid" Margin="169,0,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Счет" Binding="{Binding Path= name}" Width="200" />
+                <DataGridTextColumn  Header="Дебет(начало)" Binding="{Binding Path=debitStart}" Width="100" />
+                <DataGridTextColumn  Header="Кредит(начало)" Binding="{Binding Path=creditStart}" Width="100" />
+                <DataGridTextColumn  Header="Дебет(за период)" Binding="{Binding Path=debitPeroid}" Width="115" />
+                <DataGridTextColumn  Header="Кредит(за период)" Binding="{Binding Path=creditPeriod}" Width="115" />
+                <DataGridTextColumn  Header="Дебет(конець)" Binding="{Binding Path=debitEnd}" Width="100" />
+                <DataGridTextColumn  Header="Кредит(конець)" Binding="{Binding Path=creditEnd}" Width="100" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Период" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="З" HorizontalAlignment="Left" Margin="3,40,0,0" VerticalAlignment="Top"/>
+        <Label Content="По" HorizontalAlignment="Left" Margin="-2,71,0,0" VerticalAlignment="Top"/>
+        <DatePicker Name="DatePickerStart" HorizontalAlignment="Left" Margin="24,41,0,0" VerticalAlignment="Top"/>
+        <DatePicker Name="DatePickerEnd" HorizontalAlignment="Left" Margin="24,70,0,0" VerticalAlignment="Top"/>
+        <Button Content="Одчет" HorizontalAlignment="Left" Margin="47,109,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Create" HorizontalAlignment="Left" Margin="47,197,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>
